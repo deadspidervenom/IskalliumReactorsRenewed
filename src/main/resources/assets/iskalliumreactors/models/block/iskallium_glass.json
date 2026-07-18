@@ -1,6 +1,7 @@
 {
+    "render_type": "minecraft:translucent",
     "parent": "block/cube_all",
     "textures": {
-        "all": "iskalliumreactors:blocks/iskallium_glass"
+        "all": "iskalliumreactors:block/iskallium_glass"
     }
 }

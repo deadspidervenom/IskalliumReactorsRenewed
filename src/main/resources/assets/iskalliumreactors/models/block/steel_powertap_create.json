@@ -1,0 +1,8 @@
+{
+    "__comment": "Plain cube using the existing steel_powertap texture on all 6 faces. Shaft stubs are drawn dynamically by PowerTapCreateRenderer per exposed face - a baked-in shaft element here would be fully enclosed by this cube's own opaque faces and invisible outside of spectator/no-clip.",
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "iskalliumreactors:block/steel_powertap"
+    }
+}
+

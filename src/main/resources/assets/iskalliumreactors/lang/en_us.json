@@ -1,0 +1,16 @@
+{
+    "item.iskalliumreactors.iskallium_essence": "Iskallium Essence",
+    "item.iskalliumreactors.steel_ingot": "Steel Ingot",
+    "block.iskalliumreactors.iskallium_essence_block": "Iskallium",
+    "block.iskalliumreactors.iskallium_stone_ore": "Iskallium Ore",
+    "block.iskalliumreactors.iskallium_glass": "Iskallium Glass",
+    "block.iskalliumreactors.iskallium_tinted_glass": "Iskallium Tinted Glass",
+    "block.iskalliumreactors.steel_casing": "Steel Block",
+    "block.iskalliumreactors.steel_controller": "Iskallium Reactor Controller",
+	"block.iskalliumreactors.iskallium_deepslate_ore": "Deepslate Iskallium Ore",
+    "block.iskalliumreactors.steel_powertap": "Iskallium Reactor Power Tap",
+    "block.iskalliumreactors.steel_powertap_create": "Iskallium Reactor Power Tap (Rotational)",
+    "menu.iskalliumreactors.controller": "Reactor Status",
+    "menu.iskalliumreactors.power_tap": "Power Tap",
+    "itemGroup.iskalliumreactors": "Iskallium Reactors Renewed"
+}

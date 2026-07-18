@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "iskalliumreactors:iskallium_essence",
+    "ingredients": [
+        { "item": "iskalliumreactors:iskallium_essence_block" }
+    ],
+    "result": { "id": "iskalliumreactors:iskallium_essence", "count": 9 }
+}

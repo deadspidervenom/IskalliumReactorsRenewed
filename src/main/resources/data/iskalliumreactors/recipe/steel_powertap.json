@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "iskalliumreactors:steel_powertap",
+    "ingredients": [
+        { "item": "iskalliumreactors:steel_casing" },
+        { "item": "minecraft:redstone" }
+    ],
+    "result": { "id": "iskalliumreactors:steel_powertap", "count": 1 }
+}

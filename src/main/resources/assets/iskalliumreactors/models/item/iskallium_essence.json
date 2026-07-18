@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "iskalliumreactors:items/iskallium_essence"
-	}
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "iskalliumreactors:item/iskallium_essence"
+    }
 }

@@ -1,50 +1,86 @@
-buildscript {
-    repositories {
-        jcenter()
-        maven { url = "http://files.minecraftforge.net/maven" }
-    }
-    dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
-    }
+plugins {
+    id 'net.neoforged.gradle.userdev' version '7.1.38'
 }
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 repositories {
+    mavenCentral()
+    mavenLocal()
     maven {
-        url "http://dvs1.progwml6.com/files/maven"
+        url = "https://maven.createmod.net"
+        name = "Create"
+    }
+    maven {
+        // Create exposes Registrate as an `api` dependency, so it's on
+        // our compile classpath transitively - needs its own repo.
+        url = "https://maven.ithundxr.dev/snapshots"
+        name = "Registrate"
     }
 }
 
-apply plugin: 'net.minecraftforge.gradle.forge'
+runs {
+    configureEach {
+        systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+        modSource project.sourceSets.main
+    }
 
-version = "0.5.17"
-group = "zairus.iskalliumreactors"
-archivesBaseName = "iskalliumreactors-1.12.2"
+    client {
+        systemProperty 'neoforge.enableGameTest', 'true'
+    }
 
-sourceCompatibility = targetCompatibility = "1.8"
-compileJava {
-    sourceCompatibility = targetCompatibility = "1.8"
+    server {
+        systemProperty 'neoforge.enableGameTest', 'true'
+        argument '--nogui'
+    }
+
+    data {
+        arguments.addAll '--mod', mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+    }
 }
 
-minecraft {
-    version = "1.12.2-14.23.3.2662"
-    runDir = "run"
-    mappings = "snapshot_20171003"
-}
+sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
-    deobfCompile "mezz.jei:jei_1.12.2:4.8.5.147"
+    implementation "net.neoforged:neoforge:${neo_version}"
+
+    implementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") {
+        transitive = false
+    }
+    
+    implementation("net.createmod.ponder:ponder-neoforge:${ponder_version}+mc${minecraft_version}")
+    
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
+    runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
+    
+    implementation("com.tterrag.registrate:Registrate:${registrate_version}")
 }
 
-processResources {
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
-
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-        expand 'version':project.version, 'mcversion':project.minecraft.version
-    }
-
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
+// Expand mod metadata placeholders into neoforge.mods.toml
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [
+        minecraft_version      : minecraft_version,
+        minecraft_version_range: minecraft_version_range,
+        neo_version            : neo_version,
+        neo_version_range      : neo_version_range,
+        loader_version_range   : loader_version_range,
+        create_version_range   : create_version_range,
+        mod_id                 : mod_id,
+        mod_name               : mod_name,
+        mod_license            : mod_license,
+        mod_version            : mod_version,
+        mod_authors            : mod_authors,
+        mod_description        : mod_description,
+    ]
+    inputs.properties replaceProperties
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand replaceProperties + [project: project]
     }
 }

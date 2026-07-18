@@ -1,5 +1,5 @@
 {
-	"variants": {
-		"normal": { "model": "iskalliumreactors:steel_controller" }
-	}
+    "variants": {
+        "": { "model": "iskalliumreactors:block/steel_controller" }
+    }
 }

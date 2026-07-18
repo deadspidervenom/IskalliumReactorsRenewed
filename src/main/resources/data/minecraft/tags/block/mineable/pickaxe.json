@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "iskalliumreactors:iskallium_stone_ore",
+    "iskalliumreactors:iskallium_deepslate_ore",
+    "iskalliumreactors:iskallium_essence_block",
+    "iskalliumreactors:iskallium_glass",
+    "iskalliumreactors:iskallium_tinted_glass",
+    "iskalliumreactors:steel_casing",
+    "iskalliumreactors:steel_controller",
+    "iskalliumreactors:steel_powertap"
+  ]
+}

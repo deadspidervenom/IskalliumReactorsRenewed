@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "iskalliumreactors:iskallium_essence_block",
+    "ingredients": [
+        { "item": "iskalliumreactors:iskallium_essence" },
+        { "item": "iskalliumreactors:iskallium_essence" },
+        { "item": "iskalliumreactors:iskallium_essence" },
+        { "item": "iskalliumreactors:iskallium_essence" },
+        { "item": "iskalliumreactors:iskallium_essence" },
+        { "item": "iskalliumreactors:iskallium_essence" },
+        { "item": "iskalliumreactors:iskallium_essence" },
+        { "item": "iskalliumreactors:iskallium_essence" },
+        { "item": "iskalliumreactors:iskallium_essence" }
+    ],
+    "result": { "id": "iskalliumreactors:iskallium_essence_block", "count": 1 }
+}

@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "iskalliumreactors:steel_controller",
+    "ingredients": [
+        { "item": "iskalliumreactors:steel_casing" },
+        { "item": "iskalliumreactors:iskallium_essence" }
+    ],
+    "result": { "id": "iskalliumreactors:steel_controller", "count": 1 }
+}

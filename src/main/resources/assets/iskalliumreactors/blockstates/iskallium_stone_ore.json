@@ -1,5 +1,5 @@
 {
-	"variants": {
-		"normal": { "model": "iskalliumreactors:iskallium_stone_ore" }
-	}
+    "variants": {
+        "": { "model": "iskalliumreactors:block/iskallium_stone_ore" }
+    }
 }

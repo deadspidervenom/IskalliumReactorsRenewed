@@ -1,0 +1,15 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "create"
+        }
+    ],
+    "type": "minecraft:crafting_shapeless",
+    "group": "iskalliumreactors:steel_powertap_create",
+    "ingredients": [
+        { "item": "iskalliumreactors:steel_casing" },
+        { "item": "create:shaft" }
+    ],
+    "result": { "id": "iskalliumreactors:steel_powertap_create", "count": 1 }
+}

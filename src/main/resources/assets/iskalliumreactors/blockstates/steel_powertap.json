@@ -1,5 +1,5 @@
 {
-	"variants": {
-		"normal": { "model": "iskalliumreactors:steel_powertap" }
-	}
+    "variants": {
+        "": { "model": "iskalliumreactors:block/steel_powertap" }
+    }
 }

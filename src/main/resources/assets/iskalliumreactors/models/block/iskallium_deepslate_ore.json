@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "iskalliumreactors:block/iskallium_deepslate_ore"
+  }
+}

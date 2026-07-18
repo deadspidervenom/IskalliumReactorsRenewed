@@ -1,0 +1,26 @@
+{
+  "feature": "iskalliumreactors:iskallium_deepslate_ore",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 10
+    },
+    {
+      "type": "count",
+      "count": {
+        "type": "constant",
+        "value": 1
+      }
+    },
+    { "type": "in_square" },
+    {
+      "type": "height_range",
+      "height": {
+        "type": "uniform",
+        "min_inclusive": { "absolute": -59 },
+        "max_inclusive": { "absolute": -20 }
+      }
+    },
+    { "type": "minecraft:biome" }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "iskalliumreactors:block/steel_powertap_create" },
+        "axis=z": { "model": "iskalliumreactors:block/steel_powertap_create", "x": 90 },
+        "axis=x": { "model": "iskalliumreactors:block/steel_powertap_create", "x": 90, "y": 90 }
+    }
+}

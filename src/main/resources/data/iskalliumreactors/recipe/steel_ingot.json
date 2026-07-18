@@ -1,0 +1,20 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:not",
+            "value": { "type": "iskalliumreactors:config_enabled", "flag": "useBlastFurnaceSteelRecipe" }
+        }
+    ],
+    "type": "minecraft:crafting_shaped",
+    "group": "iskalliumreactors:steel_ingot",
+    "pattern": [
+        "iii",
+        "ici",
+        "iii"
+    ],
+    "key": {
+        "i": { "item": "minecraft:iron_ingot" },
+        "c": { "item": "minecraft:coal_block" }
+    },
+    "result": { "id": "iskalliumreactors:steel_ingot", "count": 9 }
+}

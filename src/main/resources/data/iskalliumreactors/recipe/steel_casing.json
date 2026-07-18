@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "iskalliumreactors:steel_casing",
+    "ingredients": [
+        { "tag": "c:ingots/steel" },
+        { "tag": "c:ingots/steel" },
+        { "tag": "c:ingots/steel" },
+        { "tag": "c:ingots/steel" },
+        { "tag": "c:ingots/steel" },
+        { "tag": "c:ingots/steel" },
+        { "tag": "c:ingots/steel" },
+        { "tag": "c:ingots/steel" },
+        { "tag": "c:ingots/steel" }
+    ],
+    "result": { "id": "iskalliumreactors:steel_casing", "count": 1 }
+}
